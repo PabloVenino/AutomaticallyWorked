@@ -1,0 +1,20 @@
+from selenium import webdriver
+import time
+
+navegador = webdriver.Chrome()
+navegador.get(site)
+time.sleep(1)
+navegador.find_element_by_xpath('//*[@id="txtUsuario"]').send_keys(login)
+navegador.find_element_by_xpath('//*[@id="txtSenha"]').send_keys(senha)
+navegador.find_element_by_xpath('//*[@id="btnEntrar"]').click()
+time.sleep(1)
+navegador.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_ddlBuscaStatusIgual"]/option[2]').click()
+time.sleep(1)
+navegador.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtBuscaAtivacaoInicio"]').send_keys('10022021')
+time.sleep(1)
+navegador.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_txtBuscaAtivacaoFim"]').send_keys('15022021')
+time.sleep(1)
+navegador.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_btnBuscaContrato"]').click()
+time.sleep(1)
+navegador.find_element_by_xpath('//*[@id="ctl00_ContentPlaceHolder1_btnBuscaExportar"]').click()
+time.sleep(1)
