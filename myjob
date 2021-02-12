@@ -1,5 +1,6 @@
 from selenium import webdriver
 import time
+from help import login, senha, site
 
 navegador = webdriver.Chrome()
 navegador.get(site)
